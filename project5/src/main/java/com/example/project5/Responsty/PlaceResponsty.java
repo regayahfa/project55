@@ -6,5 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PlaceResponsty extends JpaRepository<Place, Integer> {
-
+    Place findAllById(Integer id);
+    Place findPlaceById(Integer id);
 }

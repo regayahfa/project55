@@ -27,4 +27,8 @@ public class Place {
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "place")
     private Set<User> userSet;
 
+    @OneToOne(cascade = CascadeType.ALL,mappedBy = "place")
+    @PrimaryKeyJoinColumn
+    private PlaceDitils placeDitils;
+
 }
